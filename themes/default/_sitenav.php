@@ -22,5 +22,4 @@
     </div><!--/.nav-collapse -->
   </div>
 </nav>
-
-<div class="container"><!-- Start of Main Container -->
+<div id="main-content-handler" class="container"><!-- Start of Main Container -->

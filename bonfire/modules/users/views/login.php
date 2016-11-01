@@ -27,7 +27,7 @@
                 <?php echo form_open(LOGIN_URL, array('autocomplete' => 'off','class'=>'form-signin')); ?>
                     <input type="text" name="login" id="login_value" class="form-control" value="<?php echo set_value('login'); ?>" tabindex="1" placeholder="<?php echo $this->settings_lib->item('auth.login_type') == 'both' ? lang('bf_username') .'/'. lang('bf_email') : ucwords($this->settings_lib->item('auth.login_type')) ?>" required autofocus />
                     <input type="password" name="password" id="password" class="form-control" value="" tabindex="2" placeholder="<?php echo lang('bf_password'); ?>" required />                    
-                    <input class="btn btn-lg btn-primary btn-block" type="submit" name="log-me-in" id="submit" value="<?php e(lang('us_let_me_in')); ?>" tabindex="5" />
+                    <input class="btn btn-lg btn-success btn-block" type="submit" name="log-me-in" id="submit" value="<?php e(lang('us_let_me_in')); ?>" tabindex="5" />
                     <?php if ($this->settings_lib->item('auth.allow_remember')) : ?>
                         <label class="checkbox pull-left">
                             <input type="checkbox" name="remember_me" id="remember_me" value="1" tabindex="3" />

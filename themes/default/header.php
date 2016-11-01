@@ -1,6 +1,6 @@
 <?php
 
-Assets::add_css(array('bootstrap.min.css', 'bootstrap-responsive.min.css','https://fonts.googleapis.com/css?family=Anton|Open+Sans+Condensed:300|Source+Sans+Pro|Ubuntu'));
+Assets::add_css(array('bootstrap.min.css','https://fonts.googleapis.com/css?family=Anton|Open+Sans+Condensed:300|Source+Sans+Pro|Ubuntu'));
 
 Assets::add_js('bootstrap.min.js');
 

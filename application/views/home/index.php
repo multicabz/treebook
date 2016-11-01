@@ -1,46 +1,47 @@
-<div class="jumbotron" text-align="center">
-	<h1>Welcome to Bonfire</h1>
+<?php if(!isset($current_user)) : ?>
+
+<div class="jumbotron">
+	<h1>Welcome to Treebook!</h1>
 
 	<p class="lead">Kickstart your CodeIgniter applications and save yourself 100s of hours of development time.<br/>That means you make more money.</p>
 
 	<?php if (isset($current_user->email)) : ?>
-		<a href="<?php echo site_url(SITE_AREA) ?>" class="btn btn-large btn-success">Go to the Admin area</a>
+		<a href="<?php echo site_url(SITE_AREA) ?>" class="btn btn-large btn-default"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> View my family</a>
 	<?php else :?>
-		<a href="<?php echo site_url(LOGIN_URL); ?>" class="btn btn-large btn-primary"><?php echo lang('bf_action_login'); ?></a>
+		<a href="<?php echo site_url(LOGIN_URL); ?>" class="btn btn-success"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> <?php echo lang('bf_action_login'); ?></a>
 	<?php endif;?>
 </div>
 
 <hr />
 
-<div class="row-fluid">
-
-	<div class="span6">
-		<h4>A Solid Base</h4>
-
-		<p>Bonfire is based on <a href="http://ellislab.com/codeigniter" target="_blank">CodeIgniter <?php echo CI_VERSION; ?></a>, a proven PHP framework. In order to make the best use of it, you should be comfortable with CodeIgniter and its <a href="http://ellislab.com/codeigniter/user-guide/" target="_blank">documentation</a> first.</p>
-
-		<p>We use Twitter's <a href="">Bootstrap</a> front-end framework and <a href="http://jquery.com/">jQuery</a> as the basis of the CSS and Javascript.</p>
-	</div>
-
-	<div class="span6">
-		<h4>A Growing Community</h4>
-
-		<p>Bonfire has an ever-growing <a href="http://forums.cibonfire.com">community</a> of users that are there to help you get unstuck, or make the best use of this powerful system.</p>
-
-		<p>Bugs and feature discussion also happen on GitHub's <a href="https://github.com/ci-bonfire/Bonfire/issues?direction=desc&labels=0.7&sort=created&state=open">issue tracker</a>. This is the best place to report bugs and discuss new features.</p>
-	</div>
+<div class="row text-center">
+    <div class="col-lg-4">
+      <img class="img-circle" src="<?php echo site_url('media/photos/1.jpg'); ?>" alt="Generic placeholder image" width="140" height="140">
+      <h2>Johnshe Ricaplaza</h2>
+      <p>Hellow world!</p>
+      <p><a class="btn btn-default" href="#" role="button">View profile »</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img class="img-circle" src="<?php echo site_url('media/photos/2.jpg'); ?>" alt="Generic placeholder image" width="140" height="140">
+      <h2>Jenarie Undang</h2>
+      <p>We have a vacation today!</p>
+      <p><a class="btn btn-default" href="#" role="button">View profile »</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img class="img-circle" src="<?php echo site_url('media/photos/3.jpg'); ?>" alt="Generic placeholder image" width="140" height="140">
+      <h2>Amille Rey Cabasag</h2>
+      <p>Family reunion today!</p>
+      <p><a class="btn btn-default" href="#" role="button">View profile »</a></p>
+    </div><!-- /.col-lg-4 -->
 </div>
 
-<div class="row-fluid">
+<?php else: ?>
 
-	<div class="span6">
-		<h4>Built-in Flexibility</h4>
+            <div class="col-md-9">
+                <div class="profile-content">
+                               Some user related content goes here...
+                </div>
+            </div>
+    </div> <!---_sidebar end---->
 
-		<p>A <a href="https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc">modular system</a> that allows code re-use, and overriding core modules with custom modules.</p>
-
-		<p>A <i>template system</i> that allows parent-child themes, and overriding controller views in the template.</p>
-
-		<p><i>Role-Based Access Control</i> that provides as much fine-grained control as your modules need.</p>
-	</div>
-
-</div>
+<?php endif; ?>

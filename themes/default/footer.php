@@ -1,8 +1,9 @@
+    </div> <!--end of container-->
     <?php if ( ! isset($show) || $show == true) : ?>
     <hr />
     <footer class="footer">
         <div class="container">
-            <p>Powered by <a href="http://cibonfire.com" target="_blank">Bonfire <?php echo BONFIRE_VERSION; ?></a></p>
+            <p class="text-center">&copy TREEBOOK <?php echo date("Y"); ?></a></p>
         </div>
     </footer>
     <?php endif; ?>
