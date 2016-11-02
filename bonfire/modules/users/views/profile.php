@@ -1,7 +1,7 @@
 <?php
 
 $errorClass   = empty($errorClass) ? ' error' : $errorClass;
-$controlClass = empty($controlClass) ? 'span6' : $controlClass;
+$controlClass = empty($controlClass) ? 'form-control' : $controlClass;
 $fieldData = array(
     'errorClass'   => $errorClass,
     'controlClass' => $controlClass,
@@ -43,7 +43,7 @@ if (empty($renderPayload) && isset($this->auth)) {
         <?php echo lang('us_banned_admin_note'); ?>
     </div>
     <?php endif; ?>
-    <div class="alert alert-info">
+    <div class="alert alert-success">
         <h4 class="alert-heading"><?php echo lang('bf_required_note'); ?></h4>
         <?php
         if (isset($password_hints)) {
@@ -66,9 +66,9 @@ if (empty($renderPayload) && isset($this->auth)) {
                     <?php $this->load->view('users/user_meta', array('frontend_only' => true)); ?>
                     <!-- End of User Meta -->
                 </fieldset>
-                <fieldset class="form-actions">
-                    <input type="submit" name="save" class="btn btn-primary" value="<?php echo lang('bf_action_save') . ' ' . lang('bf_user'); ?>" />
-                    <?php echo lang('bf_or') . ' ' . anchor('/', lang('bf_action_cancel')); ?>
+                <fieldset class="form-actions" style="margin-top: 20px;">
+                    <input type="submit" name="save" class="btn btn-success" value="<?php echo lang('bf_action_save') . ' ' . lang('bf_user'); ?>" />
+                    <?php echo lang('bf_or') . ' ' . anchor('/', '<i class="glyphicon glyphicon-remove"></i> '.lang('bf_action_cancel'),array('class'=>'btn btn-default')); ?>
                 </fieldset>
             <?php echo form_close(); ?>
         </div>

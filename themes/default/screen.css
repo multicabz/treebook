@@ -4,6 +4,12 @@ body{
 #main-content-handler{
     margin-top: 30px;
 }
+.action-notification{
+    margin-top: 20px;
+}
+.page-header{
+    margin-top: 5px;
+}
 .jumbotron {
     text-align: center;
     margin-bottom: 30px;
@@ -104,12 +110,12 @@ body{
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-.form-signin input[type="text"],
-.form-signin input[type="password"]{
+input[type="text"],
+input[type="password"]{
     box-shadow: none;
 }
-.form-signin input[type="text"]:focus,
-.form-signin input[type="password"]:focus{
+input[type="text"]:focus,
+input[type="password"]:focus{
     border: solid 1px #458131;
 }
 .account-wall
@@ -161,6 +167,7 @@ body{
 }
 .profile-sidebar .basic{
     background-color: #f6f9fb;
+    border: solid 1px #B0FC96;
     padding: 20px;
 }
 .profile-userpic img {
@@ -234,8 +241,8 @@ body{
 }
 
 .profile-usermenu ul li a:hover {
-  background-color: #fafcfd;
-  color: #5b9bd1;
+  color: #458131;
+  background-color: #f6f9fb;
 }
 
 .profile-usermenu ul li.active {
@@ -243,10 +250,9 @@ body{
 }
 
 .profile-usermenu ul li.active a {
-  color: #5b9bd1;
+  color: #458131;
   background-color: #f6f9fb;
-  border-left: 2px solid #5b9bd1;
-  margin-left: -2px;
+  border-left: 2px solid #458131;
 }
 
 /* Profile Content */

@@ -1,3 +1,6 @@
+
+                </div>
+        </div> <!---_sidebar end---->
     </div> <!--end of container-->
     <?php if ( ! isset($show) || $show == true) : ?>
     <hr />

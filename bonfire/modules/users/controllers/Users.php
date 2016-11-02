@@ -168,7 +168,7 @@ class Users extends Front_Controller
                     'users'
                 );
 
-                Template::set_message(lang('us_profile_updated_success'), 'success');
+                Template::set_message('<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> '.lang('us_profile_updated_success'), 'success');
 
                 // Redirect to make sure any language changes are picked up.
                 Template::redirect('/users/profile');

@@ -27,14 +27,20 @@
                         <!-- SIDEBAR MENU -->
                         <div class="profile-usermenu">
                                 <ul class="nav">
-                                        <li class="active">
-                                                <a href="#">
+                                        <li <?php echo check_segment(2,""); ?>>
+                                                <a href="<?php echo site_url(); ?>">
                                                 <i class="glyphicon glyphicon-home"></i>
                                                 Overview </a>
                                         </li>
                                         <li>
                                                 <a href="#">
-                                                <i class="glyphicon glyphicon-user"></i>
+                                                    <i class="glyphicon glyphicon-tree-deciduous"></i>
+                                                    Family tree
+                                                </a>
+                                        </li>
+                                        <li <?php echo check_method('profile'); ?>>
+                                                <a href="<?php echo site_url('users/profile'); ?>">
+                                                <i class="glyphicon glyphicon-wrench"></i>
                                                 Account Settings </a>
                                         </li>
                                         <li>
@@ -52,3 +58,7 @@
                         <!-- END MENU -->
                 </div>
         </div>
+        <div class="col-md-9">
+            <div class="action-notification">
+                 <?php echo Template::message(); ?>
+            </div>
